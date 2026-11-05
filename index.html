@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StyleAura — discover dresses and fashion for every occasion.">
+  <title>StyleAura | Fashion Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">✦ Free shipping on orders above ₹999 <span>Easy returns · Secure payments</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">✿</span> Style<span>Aura</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#home">Home</a><a href="#shop">Shop</a>
+      <a href="#shop" data-filter-link="Women">Women</a><a href="#shop" data-filter-link="Ethnic">Ethnic Wear</a>
+      <a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search dresses..."></label>
+      <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡ <small id="wishCount">0</small></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">🛍 <small id="cartCount">0</small></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">THE NEW SEASON EDIT</p>
+        <h1>Find your<br><em>beautiful</em> style.</h1>
+        <p>Thoughtful details. Beautiful outfits. Made for your moments.</p>
+        <a class="primary-btn" href="#shop">Explore collection <span>→</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Fashion collection"></div>
+      <div class="hero-note">DRESS WELL<br><b>FEEL AMAZING</b> ♡</div>
+    </section>
+
+    <section class="benefits">
+      <div><b>♧</b><span><strong>Free Shipping</strong><small>On orders above ₹999</small></span></div>
+      <div><b>✓</b><span><strong>Secure Payments</strong><small>Safe & simple checkout</small></span></div>
+      <div><b>↺</b><span><strong>Easy Returns</strong><small>7-day return window</small></span></div>
+      <div><b>♡</b><span><strong>Friendly Support</strong><small>Here when you need us</small></span></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <p class="eyebrow">MADE TO BE WORN</p><h2>Shop the collection</h2>
+        <p>Find a look that feels like you.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All">All styles</button>
+        <button class="filter" data-filter="Women">Dresses</button>
+        <button class="filter" data-filter="Ethnic">Ethnic</button>
+        <button class="filter" data-filter="Party">Party wear</button>
+        <button class="filter" data-filter="Casual">Casual</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo" id="about">
+      <div><p class="eyebrow">A LITTLE SOMETHING SPECIAL</p><h2>Style that tells<br>your story.</h2>
+      <p>From everyday favourites to unforgettable celebrations, discover pieces you'll love wearing.</p>
+      <a class="primary-btn dark-btn" href="#shop">Shop favourites →</a></div>
+      <div class="promo-stamp">STYLE<br>IS YOURS<br><span>✿</span></div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div><p class="eyebrow">THE STYLE LETTER</p><h2>A little joy in your inbox.</h2><p>Get new arrivals, styling notes and special offers.</p></div>
+      <form id="newsletterForm"><input type="email" id="emailInput" placeholder="Your email address" required><button class="primary-btn">Subscribe</button></form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div><a class="brand footer-brand" href="#home">✿ Style<span>Aura</span></a><p>Wear what makes you feel wonderful.</p></div>
+      <div><h3>Explore</h3><a href="#home">Home</a><a href="#shop">Shop all</a><a href="#about">Our story</a></div>
+      <div><h3>Help</h3><a href="#contact">Contact us</a><a href="#contact">Shipping & returns</a><a href="#contact">FAQs</a></div>
+      <div><h3>Follow along</h3><p class="socials">◎　♡　▷　✉</p><p>Made with love for your wardrobe.</p></div>
+    </div>
+    <div class="copyright">© 2026 StyleAura. All rights reserved. <span>Designed for everyday elegance.</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2>Your bag <span id="drawerCount">(0)</span></h2><button id="closeCart" class="close-btn">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Your bag is waiting for something lovely.</p></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><p>Shipping and taxes calculated at checkout.</p><button id="checkoutBtn" class="primary-btn checkout">Continue to checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
